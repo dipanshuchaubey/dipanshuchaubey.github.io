@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  max-width: 40vw;
+  margin: 20px auto;
+  box-shadow: 10px 10px 20px rgba(190, 190, 190, 0.6),
+    0px 0px 20px rgba(66, 66, 66, 0.6);
+  border-radius: 30px;
+  padding: 50px;
+}
+
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head .bg-circle {
+  height: 20em;
+  width: 20em;
+  background: #333;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.head img {
+  z-index: 2;
+  max-width: 60%;
+}
+
+.main h1 {
+  margin-top: 8%;
+  font-size: 35px;
+}
+
+.main .sizes {
+  max-width: 100%;
+  margin-top: 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main .sizes button {
+  padding: 3px 18px;
+  border: 2px #333 solid;
+  border-radius: 10px;
+  background: none;
+  cursor: pointer;
+}
+
+.main .sizes button.selected {
+  background: #333;
+  color: #fff;
+}
+
+.purchase {
+  margin-top: 10%;
+}
+
+.purchase button {
+  width: 100%;
+  border: none;
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  background: rgb(248, 128, 128);
+}
+
+@media (max-width: 1000px) {
+  .card {
+    max-width: 60vw;
+  }
+
+  .head .bg-circle {
+    height: 10em;
+    width: 10em;
+  }
+}
+
+@media (max-width: 1400px) and (min-width: 1000px) {
+  .head .bg-circle {
+    height: 12em;
+    width: 12em;
+  }
+}
+
+@media (max-width: 580px) {
+  .main h1,
+  p {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    padding: 30px;
+    max-width: 60vw;
+  }
+
+  .main .sizes {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main .sizes button {
+    margin: 15px 4px 0 4px;
+  }
+
+  .head .bg-circle {
+    height: 5em;
+    width: 5em;
+  }
+}
